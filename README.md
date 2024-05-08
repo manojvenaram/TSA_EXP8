@@ -1,5 +1,5 @@
 # Ex.No: 08     MOVING AVERAGE MODEL AND EXPONENTIAL SMOOTHING
-### Date: 
+### Date: 06.04.2024
 
 
 ### AIM:
