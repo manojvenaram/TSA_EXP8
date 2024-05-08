@@ -69,49 +69,10 @@ plt.ylabel('International Passengers')
 plt.legend()
 plt.show()
 ```
-#### Fit an AutoRegressive (AR) model with 13 lags
-```
-lag_order = 13
-model = AutoReg(data['International '], lags=lag_order)
-model_fit = model.fit()
-```
-#### Plot Partial Autocorrelation Function (PACF) and Autocorrelation Function (ACF)
-```
-plot_acf(data['International '])
-plt.title('Autocorrelation Function (ACF)')
-plt.show()
-
-plot_pacf(data['International '])
-plt.title('Partial Autocorrelation Function (PACF)')
-plt.show()
-```
-#### Make predictions using the AR model
-```
-predictions = model_fit.predict(start=lag_order, end=len(data)-1)
-```
-#### Compare the predictions with the original data
-```
-mse = mean_squared_error(data['International '][lag_order:], predictions)
-print('Mean Squared Error (MSE):', mse)
-```
-#### Plot the original data and predictions
-```
-plt.plot(data['International '][lag_order:], label='Original Data')
-plt.plot(predictions, label='Predictions')
-plt.title('AR Model Predictions vs Original Data')
-plt.xlabel('Index')
-plt.ylabel('International Passengers')
-plt.legend()
-plt.show()
-```
 ### OUTPUT:
 #### Plot the original data and fitted value
 ![image](https://github.com/manojvenaram/TSA_EXP8/assets/94165064/b4f4a99c-80df-42d6-9a32-75cd36d347c6)
-#### Plot Partial Autocorrelation Function (PACF) and Autocorrelation Function (ACF)
-![image](https://github.com/manojvenaram/TSA_EXP8/assets/94165064/60862b92-0bbd-428e-85c1-c7069a7d848f)
-![image](https://github.com/manojvenaram/TSA_EXP8/assets/94165064/daea0877-a99a-491a-96ae-270f4b47f6eb)
-#### Plot the original data and predictions
-![image](https://github.com/manojvenaram/TSA_EXP8/assets/94165064/5cf8d0f9-13bc-49dd-af9f-32eafcd0f0a0)
+
 
 
 
